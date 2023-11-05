@@ -10,12 +10,16 @@
         margin-left: 16px;
     }
 
-    background-color: aqua;
+    background-color: rgba(63, 66, 66, 0.356);
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active {
+    background-color: aqua !important;
 }

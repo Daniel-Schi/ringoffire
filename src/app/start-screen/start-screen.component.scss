@@ -3,10 +3,13 @@
     height: 100vh;
     max-width: 100%;
     background-color: black;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 750px) {
+        overflow: hidden;
+    }
 
     img {
         height: 50vh;

@@ -29,8 +29,6 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     this.newGame();
     this.route.params.subscribe((params) => {
-      console.log(params);
-      
       this.gameId = params['id'];
       this.setGameParams();
     });
@@ -47,8 +45,6 @@ export class GameComponent implements OnInit {
       this.game.currentPlayer = currentGame.currentPlayer;
       this.game.currentCard = currentGame.currentCard;
       this.game.pickCardAnimation = currentGame.pickCardAnimation;
-      console.log('Game update', currentGame);
-
     });
   }
 
@@ -80,7 +76,7 @@ export class GameComponent implements OnInit {
     dialogRef.afterClosed().subscribe((name: string) => {
       if (name && name.length > 0)
         this.game.players.push(name);
-        this.saveGame();
+      this.saveGame();
     });
   }
 
